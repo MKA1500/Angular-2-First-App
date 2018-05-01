@@ -1,3 +1,17 @@
-<p>
-  products works!
-</p>
+<div class="offset-md-2 col-md-8 products-box">
+  <ul *ngFor="let product of products">
+    <li>
+      <input [(ngModel)]="product.name" class="form-control" />
+      <div (click)="onSelectProduct(product)" class="product-to-select">
+        Name: {{ product.name | uppercase }}
+      </div>
+      <div>
+        Price: {{ product.price | currency }}
+      </div>
+    </li>
+  </ul>
+</div>
+<div class="offset-md-2 col-md-8 products-box">
+  <h3>Selected Product:</h3>
+  <div class="product-selected"> {{selectedProduct.name | uppercase }} </div>
+</div>

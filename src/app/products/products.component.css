@@ -1,0 +1,25 @@
+.products-box {
+  padding-top: 2rem;
+}
+
+.product-to-select {
+  color: #4885ed;
+  font-size: 1.5rem;
+}
+
+.product-to-select:hover {
+  cursor: pointer;
+}
+
+.product-selected {
+  color: #db3236;
+  font-size: 1.5rem;
+}
+
+ul {
+  padding-left: 0;
+}
+
+ul li {
+  list-style: none
+}
