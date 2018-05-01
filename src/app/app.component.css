@@ -1,0 +1,13 @@
+.container {
+  padding-top: 2rem;
+}
+
+h1, h2, ul li {
+    text-align: center;
+    list-style: none;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
