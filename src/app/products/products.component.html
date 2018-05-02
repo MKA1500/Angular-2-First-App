@@ -1,5 +1,8 @@
 <div class="offset-md-2 col-md-8 products-box">
-  <ul *ngFor="let product of products">
+  <ul
+  class="product"
+  [class.selected]="selectedProduct && selectedProduct.name === product.name"
+  *ngFor="let product of products">
     <li>
       <input [(ngModel)]="product.name" class="form-control" />
       <div (click)="onSelectProduct(product)" class="product-to-select">
@@ -11,7 +14,7 @@
     </li>
   </ul>
 </div>
-<div class="offset-md-2 col-md-8 products-box">
+<div *ngIf="selectedProduct" class="offset-md-2 col-md-8 products-box">
   <h3>Selected Product:</h3>
-  <div class="product-selected"> {{selectedProduct.name | uppercase }} </div>
+  <div class="product-selected"> {{ selectedProduct.name | uppercase }} </div>
 </div>

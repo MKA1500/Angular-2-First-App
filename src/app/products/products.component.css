@@ -2,17 +2,21 @@
   padding-top: 2rem;
 }
 
-.product-to-select {
+.product .product-to-select {
   color: #4885ed;
   font-size: 1.5rem;
 }
 
-.product-to-select:hover {
+.product.selected .product-to-select {
+  color: #db3236;
+}
+
+.product .product-to-select:hover {
   cursor: pointer;
 }
 
 .product-selected {
-  color: #db3236;
+  color: #3cba54;
   font-size: 1.5rem;
 }
 
