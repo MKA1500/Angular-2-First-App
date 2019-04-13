@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { AccountsService } from './shared/accounts.service';
+import { ItemsService } from './shared/items.service';
 
 @Component({
   selector: 'app-root',
@@ -7,11 +7,11 @@ import { AccountsService } from './shared/accounts.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  accounts: {name: string, status: string, desc: string}[] = [];
+  items: {name: string, status: string, content: string}[] = [];
 
-  constructor(private accountsService: AccountsService) {}
+  constructor(private itemsService: ItemsService) {}
 
   ngOnInit() {
-    this.accounts = this.accountsService.accounts;
+    this.items = this.itemsService.items;
   }
 }

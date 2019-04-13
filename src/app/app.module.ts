@@ -3,22 +3,22 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
-import { AccountComponent } from './account/account.component';
-import { NewAccountComponent } from './new-account/new-account.component';
-import { AccountsService } from './shared/accounts.service';
+import { ItemComponent } from './item/item.component';
+import { NewitemComponent } from './new-item/new-item.component';
+import { ItemsService } from './shared/items.service';
 import { LoggingService } from './shared/logging.service';
 
 @NgModule({
   declarations: [
     AppComponent,
-    AccountComponent,
-    NewAccountComponent
+    ItemComponent,
+    NewitemComponent
   ],
   imports: [
     BrowserModule,
     FormsModule
   ],
-  providers: [AccountsService, LoggingService],
+  providers: [ItemsService, LoggingService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

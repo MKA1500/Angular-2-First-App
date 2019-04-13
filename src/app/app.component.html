@@ -2,12 +2,12 @@
   <div class="row">
     <div class="col-lg-6 col-md-4 col-2"></div>
     <div class="col-lg-6 col-md-8 col-10">
-      <app-new-account></app-new-account>
-      <app-account
-        *ngFor="let acc of accounts; let i = index"
-        [account]="acc"
+      <app-new-item></app-new-item>
+      <app-item
+        *ngFor="let acc of items; let i = index"
+        [item]="acc"
         [id]="i"
-        (statusChanged)="onStatusChanged($event)"></app-account>
+        (statusChanged)="onStatusChanged($event)"></app-item>
     </div>
   </div>
 </div>
