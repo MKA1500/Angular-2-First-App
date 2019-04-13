@@ -1,13 +1,4 @@
+<app-admin-header></app-admin-header>
 <div class="container">
-  <div class="row">
-    <div class="col-lg-6 col-md-4 col-2"></div>
-    <div class="col-lg-6 col-md-8 col-10">
-      <app-new-item></app-new-item>
-      <app-item
-        *ngFor="let acc of items; let i = index"
-        [item]="acc"
-        [id]="i"
-        (statusChanged)="onStatusChanged($event)"></app-item>
-    </div>
-  </div>
+  <router-outlet></router-outlet>
 </div>

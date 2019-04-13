@@ -1,11 +1,11 @@
-<div class="row item-item">
+<div class="row article-item">
   <div class="col-12">
-    <h5>{{ item.name }}</h5>
+    <h5>{{ article.name }}</h5>
     <hr>
-    <p>This item is {{ item.status }}</p>
+    <p>This article is {{ article.status }}</p>
     <hr>
     <p>Content:</p>
-    <p>{{ item.content | slice:0:39 }}<span *ngIf="item.content.length > 39">...</span></p>
+    <p>{{ article.content | slice:0:39 }}<span *ngIf="article.content.length > 39">...</span></p>
     <button
       class="btn btn-success"
       (click)="onSetTo('active')">Set to 'active'</button>

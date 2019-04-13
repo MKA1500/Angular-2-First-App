@@ -3,20 +3,20 @@ import { LoggingService } from './logging.service';
 
 @Injectable()
 
-export class ItemsService {
-  items = [
+export class ArticlesService {
+  articles = [
     {
-      name: 'Master Item',
+      name: 'Master Article',
       status: 'active',
       content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque volutpat at magna in consectetur. Cras feugiat mattis egestas. Curabitur et commodo tortor. Phasellus maximus lectus id sem sodales, et condimentum felis maximus.'
     },
     {
-      name: 'Test Item',
+      name: 'Test Article',
       status: 'inactive',
       content: 'Consectetur adipiscing elit.'
     },
     {
-      name: 'Hidden item',
+      name: 'Hidden article',
       status: 'unknown',
       content: 'Pellentesque volutpat at magna in consectetur. Cras feugiat mattis egestas. Curabitur et commodo tortor. Phasellus maximus lectus id sem sodales, et condimentum felis maximus. Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
     }
@@ -25,12 +25,12 @@ export class ItemsService {
 
   constructor(private loggingService: LoggingService) {}
 
-  addItem(name: string, status: string, content: string) {
-      this.items.unshift({name: name, status: status, content: content});
+  addArticle(name: string, status: string, content: string) {
+      this.articles.unshift({name: name, status: status, content: content});
       this.loggingService.logStatusChange(status);
   }
   updateStatus(id: number, status: string) {
-      this.items[id].status = status;
+      this.articles[id].status = status;
       this.loggingService.logStatusChange(status);
   }
 }
