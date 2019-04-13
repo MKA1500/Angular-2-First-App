@@ -1,5 +1,9 @@
-.row {
-  border: 1px solid #ccc;
-  margin: 10px 0;
-  padding: 10px 0;
+.account-item {
+  background: #ededed;
+  padding: .5rem;
+  margin-bottom: 1rem;
+}
+.btn-warning,
+.btn-secondary {
+  margin-left: .5rem;
 }

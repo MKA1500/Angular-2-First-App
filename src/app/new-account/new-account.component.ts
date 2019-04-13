@@ -14,9 +14,9 @@ export class NewAccountComponent {
               private accountsService: AccountsService) {
   }
 
-  onCreateAccount(accountName: string, accountStatus: string) {
-    this.accountsService.addAccount(accountName, accountStatus);
-    // this.loggingService.logStatusChange(accountStatus);
+  onCreateAccount(accountName: string, accountStatus: string, accountDesc: string) {
+    this.accountsService.addAccount(accountName, accountStatus, accountDesc);
+    this.loggingService.logStatusChange(accountStatus);
     console.log('new account name: ' + accountName);
   }
 }

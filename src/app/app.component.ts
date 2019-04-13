@@ -7,7 +7,7 @@ import { AccountsService } from './shared/accounts.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  accounts: {name: string, status: string}[] = [];
+  accounts: {name: string, status: string, desc: string}[] = [];
 
   constructor(private accountsService: AccountsService) {}
 
