@@ -1,3 +1,13 @@
-<p>
-  home works!
-</p>
+<div class="row">
+  <div
+    class="col-md-6"
+    *ngFor="let article of articles; index as i">
+    <h3>{{ article.name }} - {{ i }}</h3>
+    <span class="badge badge-success">{{ article.status }}</span>
+    <img
+      [src]="article.img" 
+      class="img-fluid"
+      alt="{{ article.name }}">
+    <p>{{ article.content | slice:0:39 }}<span *ngIf="article.content.length > 39">...</span></p>
+  </div>
+</div>

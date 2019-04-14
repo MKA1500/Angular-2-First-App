@@ -12,6 +12,6 @@ export class AdminComponent implements OnInit {
   constructor(private articlesService: ArticlesService) {}
 
   ngOnInit() {
+    this.articles = this.articlesService.articles;
   }
-
 }

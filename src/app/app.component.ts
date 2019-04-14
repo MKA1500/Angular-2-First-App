@@ -1,5 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-import { ArticlesService } from './admin/shared/articles.service';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -7,11 +6,7 @@ import { ArticlesService } from './admin/shared/articles.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  articles: {name: string, status: string, content: string}[] = [];
 
-  constructor(private articlesService: ArticlesService) {}
+  constructor() {}
 
-  ngOnInit() {
-    this.articles = this.articlesService.articles;
-  }
 }

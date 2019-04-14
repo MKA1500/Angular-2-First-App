@@ -1,0 +1,13 @@
+header {
+  background: #000;
+}
+header ul li {
+  display: inline-block;
+}
+header a,
+header a:hover,
+header a:visited,
+header a:active {
+  font-weight:600;
+  color: #FFF;
+}
