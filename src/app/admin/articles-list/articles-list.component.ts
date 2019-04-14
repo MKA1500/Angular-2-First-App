@@ -9,7 +9,7 @@ import { ArticlesService } from '../shared/articles.service';
   // providers: [LoggingService]
 })
 export class ArticlesListComponent {
-  @Input() article: {name: string, status: string};
+  @Input() article: {title: string, status: string};
   @Input() id: number;
 
   constructor(private loggingService: LoggingService,

@@ -7,7 +7,7 @@ import { ArticlesService } from '../admin/shared/articles.service';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-  articles: {name: string, status: string, content: string}[] = [];
+  articles: {title: string, status: string, content: string, img: string}[] = [];
 
   constructor(private articlesService: ArticlesService) {}
 

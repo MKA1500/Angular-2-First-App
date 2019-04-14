@@ -14,9 +14,12 @@ export class NewArticleComponent {
               private articlesService: ArticlesService) {
   }
 
-  onCreateArticle(articleName: string, articleStatus: string, articleContent: string) {
-    this.articlesService.addArticle(articleName, articleStatus, articleContent);
+  onCreateArticle(articleTitle: string,
+                  articleStatus: string,
+                  articleContent: string,
+                  articleImg: string) {
+    this.articlesService.addArticle(articleTitle, articleStatus, articleContent, articleImg);
     this.loggingService.logStatusChange(articleStatus);
-    console.log('new article name: ' + articleName);
+    console.log('new article name: ' + articleTitle);
   }
 }

@@ -1,11 +1,25 @@
 <div class="row new-article">
   <div class="col-12">
     <div class="form-group">
-      <label>Article Name</label>
+      <label>Article Title</label>
       <input
         type="text"
         class="form-control"
-        #articleName>
+        #articleTitle>
+    </div>
+    <div class="form-group">
+      <label>Article Image Url</label>
+      <input
+        type="text"
+        class="form-control"
+        #articleImg>
+    </div>
+    <div class="form-group">
+      <label>Article Content</label>
+      <textarea
+        type="text"
+        class="form-control"
+        #articleContent></textarea>
     </div>
     <div class="form-group">
       <select class="form-control" #status>
@@ -16,7 +30,7 @@
     </div>
     <button
       class="btn btn-primary"
-      (click)="onCreateArticle(articleName.value, status.value)">
+      (click)="onCreateArticle(articleTitle.value, status.value, articleContent.value, articleImg.value)">
       Add Article
     </button>
   </div>

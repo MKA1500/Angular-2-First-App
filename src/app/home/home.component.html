@@ -2,12 +2,12 @@
   <div
     class="col-md-6"
     *ngFor="let article of articles; index as i">
-    <h3>{{ article.name }} - {{ i }}</h3>
+    <h3>{{ article.title }} - {{ i }}</h3>
     <span class="badge badge-success">{{ article.status }}</span>
     <img
-      [src]="article.img" 
+      [src]="article.img"
       class="img-fluid"
-      alt="{{ article.name }}">
+      alt="{{ article.title }}">
     <p>{{ article.content | slice:0:39 }}<span *ngIf="article.content.length > 39">...</span></p>
   </div>
 </div>
