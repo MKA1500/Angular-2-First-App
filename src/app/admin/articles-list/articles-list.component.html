@@ -1,11 +1,15 @@
 <div class="row article-item">
   <div class="col-12">
-    <h5>{{ article.title }}</h5>
+    <h5>{{ article.title }}
+      <span
+        class="badge"
+        [ngClass]="{
+          'badge-success': article.status === 'active',
+          'badge-warning': article.status === 'inactive',
+          'badge-secondary': article.status === 'unknown'}">{{ article.status }}</span>
+    </h5>
     <hr>
-    <p>This article is {{ article.status }}</p>
-    <hr>
-    <p>Content:</p>
-    <p>{{ article.content | slice:0:39 }}<span *ngIf="article.content.length > 39">...</span></p>
+    <p>{{ article.content | slice:0:49 }}<span *ngIf="article.content.length > 39">...</span></p>
     <button
       class="btn btn-success"
       (click)="onSetTo('active')">Set to 'active'</button>
